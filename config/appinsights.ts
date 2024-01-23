@@ -2,7 +2,7 @@ import { useAzureMonitor, AzureMonitorOpenTelemetryOptions } from "@azure/monito
 
 const options: AzureMonitorOpenTelemetryOptions = {
     azureMonitorExporterOptions: {
-      connectionString: process.env.CONNECTION_STRING
+      connectionString: "REPLACE_WITH_CONNECTION_STRING",
     }
   };
 
