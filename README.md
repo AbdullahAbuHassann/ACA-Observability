@@ -1,5 +1,5 @@
-# ACA-Observability
-This is a repo with a code example of instrumenting an application with Open Telemetry and exporting it to Azure Monitor.
+# Azure Container Apps Observability
+This is a repo with a code example of instrumenting an Azure Container Apps Microservices with Open Telemetry and exporting it to Azure Monitor.
 
 # Application Overview
 Our application is simple, it will retrieve a collection of Products with the properties of name & amount/stock. Behind the scenes, however, I deliberately overcomplicated it to simulate a distributed system communicating asynchronously. Technically though, this is all synchronous communication as we will build our own dummy event bus.
