@@ -67,7 +67,7 @@ app.post("/events", (req, res) => {
 });
 
 app.listen(port, async () => {
-    console.log(`Aggregator Server is listening on port ${port}`);
+    console.log(`Products Server is listening on port ${port}`);
     
     // This code is executed when the server starts to fetch for missed events in case the server was down
     try {

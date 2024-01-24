@@ -1,5 +1,5 @@
 param environmentName string = '<ACA Environment Name>' // Provide an Azure Container Apps Environment unique name
-param acrName string = '<ACA Name>' // Your Azure Container Registry name
+param acrName string = '<ACR Name>' // Your Azure Container Registry name
 
 
 // Assuming the managed environment is in the same resource group and subscription
@@ -8,9 +8,9 @@ var environmentId = resourceId('Microsoft.App/managedEnvironments', environmentN
 param location string = 'westeurope' // Change as needed
 param logAnalyticsCustomerId string = '<Workspace ID>'// Provide Log Analytics Workspace Customer ID
 param logAnalyticsSharedKey string = '<Workspace Key>' // Provide Log Analytics Workspace Shared Key
-param inventoryImage string = '<Image Name>' // Provide the image name
-param eventsImage string = '<Image Name>'  // Provide the image name
-param productsImage string = '<Image Name>' // Provide the image name
+param inventoryImage string = '<Image Name>' // Provide the image name without the ACR name prefix, example: 'inventory:v1'
+param eventsImage string = '<Image Name>'  // Provide the image name without the ACR name prefix, example: 'events:v1'
+param productsImage string = '<Image Name>' // Provide the image name without the ACR name prefix, example: 'products:v1'
 
 
 // Assign AcrPull permission

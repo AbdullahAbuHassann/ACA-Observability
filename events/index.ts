@@ -42,11 +42,11 @@ app.post('/events', async (req, res) => {
 
     if (event.type === 'InventoryUpdated') {
         try {
-            await axios.post(`${DAPR_HOST}:${DAPR_HTTP_PORT}/v1.0/invoke/aggregator/method/events`, event);
-            res.status(200).json({message: "Inventory Updated Event Successfully Sent to Aggregator Service"})
+            await axios.post(`${DAPR_HOST}:${DAPR_HTTP_PORT}/v1.0/invoke/products/method/events`, event);
+            res.status(200).json({message: "Inventory Updated Event Successfully Sent to Products Service"})
         } catch (error) {
-            console.error('Error invoking aggregator service:', error);
-            res.status(500).send('Error invoking aggregator service for InventoryUpdated event');
+            console.error('Error invoking products service:', error);
+            res.status(500).send('Error invoking products service for InventoryUpdated event');
         }
     }
 });
