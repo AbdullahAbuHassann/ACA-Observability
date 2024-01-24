@@ -1,4 +1,4 @@
-import enableAppInsights from '../config/appinsights'
+import enableAppInsights from './config';
 enableAppInsights();
 
 import express from 'express';
